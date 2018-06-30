@@ -1,0 +1,1 @@
+curl -is -X GET http://localhost:4000/restaurants/$1 | grep ETag
