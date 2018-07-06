@@ -44,3 +44,7 @@ getting `ETag`
 ```
 sh cmd/put-table.sh `restaurantId` `_id` `ETag`
 ```
+repeat action and check results:
+```
+sh cmd/get-tables.sh
+```
