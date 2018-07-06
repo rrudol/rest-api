@@ -1,0 +1,1 @@
+curl -v -H "If-Match: \"$3\"" -H 'Content-Type: application/json' -X PUT -d '{"name":"Regular table", "seats": "4"}' http://localhost:4000/restaurants/$1/tables/$2

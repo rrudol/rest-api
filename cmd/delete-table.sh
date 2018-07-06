@@ -1,0 +1,1 @@
+curl -H "If-Match: \"$3\"" -X DELETE http://localhost:4000/restaurants/$1/tables/$2
