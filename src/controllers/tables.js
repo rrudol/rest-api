@@ -1,9 +1,10 @@
-const router = require('express').Router();
+const router = require('express').Router({mergeParams: true});
 const Table = require('../models/table');
 
 // Tables
 
 router.get('/', async (req, res) => {
+  console.log({params: req.params});
   res.send( await Table.find({ restaurantId: req.params.restaurantId }, '').limit(req.query.limit).skip(req.skip).lean().exec() );
 });
 
