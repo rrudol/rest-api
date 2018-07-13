@@ -1,10 +1,10 @@
-const router = require('express').Router();
+const router = require('express').Router({mergeParams: true});
 const Table = require('../models/table');
+const Reservation = require('../models/reservation');
 
 router.post('/:targetId', async (req, res) => {
-  const sourceTable = await Table.findById(req.params.tableId);
-  const targetTable = await Table.findById(req.params.targetId);
-  res.send(  );
+  await Reservation.updateMany({ tableId: req.params.tableId }, [], { tableId: req.params.targetId } );
+  res.sendStatus( 200 );
 });
 
 module.exports = router;
