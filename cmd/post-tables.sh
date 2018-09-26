@@ -1,1 +1,1 @@
-curl -X POST http://localhost:4000/restaurants/$1/tables
+curl -X POST http://localhost:4000/restaurants/$1/tables | jq .
